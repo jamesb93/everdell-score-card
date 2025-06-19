@@ -632,7 +632,7 @@ func main() {
 	})
 	http.HandleFunc("/games", gamesHandler)
 
-	port := "8080"
+	port := "9797"
 	if os.Getenv("PORT") != "" {
 		port = os.Getenv("PORT")
 	}
