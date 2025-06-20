@@ -567,8 +567,6 @@ const indexHTML = `
 					
 					const buttonsHtml = 
 						'<div class="absolute top-2 right-2 flex gap-2">' +
-						'<button class="edit-game-btn btn btn-sm btn-secondary" data-game-id="' + game.id + '">Edit</button>' +
-						'<button class="delete-game-btn btn btn-sm btn-secondary" data-game-id="' + game.id + '">X</button>' +
 						'</div>';
 
 					gameElement.innerHTML = buttonsHtml + '<h3 class="font-semibold text-md text-green-700">Game on ' + displayDate + '</h3>' + playersHtml;
