@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+:root {
+    --teak: #B1A15C;
+    --olive: #292A15;
+    --bronze: #554320;
+    --white: #ECE2A7;
+    --mushroom: rgb(225, 146, 78);
+}
+
+.averia-libre-light {
+  font-family: "Averia Libre", system-ui;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.averia-libre-regular {
+  font-family: "Averia Libre", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.averia-libre-bold {
+  font-family: "Averia Libre", system-ui;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.averia-libre-light-italic {
+  font-family: "Averia Libre", system-ui;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.averia-libre-regular-italic {
+  font-family: "Averia Libre", system-ui;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.averia-libre-bold-italic {
+  font-family: "Averia Libre", system-ui;
+  font-weight: 700;
+  font-style: italic;
+}
+
+body {
+    font-family: "Averia Libre", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    background-color: var(--white);
+}
+
+button {
+    cursor: pointer;
+    outline: 1px solid var(--bronze);
+}
+
+input {
+    outline: none;
+}
+
+input, button {
+    background-color: var(--teak);
+    outline: 1px solid var(--bronze);
+    font-family: "Averia Libre", system-ui;
+    font-weight: 400;
+    border: none;
+    color: black;
+}
+
+h1, h2, h3, h4, a, p, div {
+    color: var(--olive);
+}
+
+a:visited {
+    text-decoration: none;
+    color: var(--mushroom);
+}
