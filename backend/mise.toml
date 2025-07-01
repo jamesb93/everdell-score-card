@@ -11,4 +11,6 @@ run = "go build"
 
 [tasks.dev]
 description = "run the backend in dev mode"
-run = "go run main.go"
+run = "go run ."
+sources = ["**/*.go", "**/*.mod"]
+outputs = { auto = true }
