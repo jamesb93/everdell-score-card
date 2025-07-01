@@ -1,0 +1,12 @@
+[tools]
+bun = "latest"
+
+[tasks.init]
+run = "bun i"
+
+[tasks.build]
+run = "bun run build"
+
+[tasks.dev]
+run = "bun run dev"
+

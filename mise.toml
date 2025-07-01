@@ -1,0 +1,33 @@
+[tasks.build-frontend]
+description = "Build the frontend application"
+run = "mise run build"
+dir = "frontend"
+
+[tasks.build-backend]
+description = "Build the Go service"
+run = "mise run build"
+dir = "backend"
+
+[tasks.build-all]
+description = "Build all projects"
+depends = ["build-frontend", "build-backend"]
+run = "echo 'All projects built successfully!'"
+
+[tasks.deploy]
+description = "Deploy all services"
+depends = ["build-all"]
+run = "echo 'Deploying all services...'"
+
+[tasks.dev-frontend]
+description = "Run frontend in dev mode"
+run = "mise run dev"
+dir = "frontend"
+
+[tasks.dev-backend]
+description = "Run backend in dev mode"
+run = "mise run dev"
+dir = "backend"
+
+[tasks.dev]
+description = "Run all services in dev mode"
+depends = ["dev-frontend", "dev-backend"]

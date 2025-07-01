@@ -1,0 +1,14 @@
+[tools]
+go = "1.24"
+
+[tasks.init]
+description = "init modules"
+run = "go mod tidy"
+
+[tasks.build]
+description = "build the backend"
+run = "go build"
+
+[tasks.dev]
+description = "run the backend in dev mode"
+run = "go run main.go"
