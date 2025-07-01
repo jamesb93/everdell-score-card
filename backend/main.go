@@ -156,9 +156,14 @@ func getScoresForGame(gameID int) ([]Score, error) {
 
 // --- The rest of the file (getGamesHandler, getGameHandler, main) remains the same ---
 func getGamesHandler(w http.ResponseWriter, r *http.Request) {
-    rows, err := db.Query("SELECT id, game_date FROM games ORDER BY game_date DESC")
-    if err != nil { http.Error(w, "Failed to query games", http.StatusInternalServerError); return }
-    defer rows.Close()
+	rows, err := db.Query("SELECT id, game_date FROM games ORDER BY game_date DESC")
+    if err != nil { 
+		log.Printf("Error querying games: %v", err)
+		http.Error(w, "Failed to query games", http.StatusInternalServerError); 
+		return 
+	}
+    
+	defer rows.Close()
     var games []Game
     for rows.Next() {
         var game Game
