@@ -197,7 +197,7 @@ func main() {
 	r.HandleFunc("/games", createGameHandler).Methods("POST")
 	r.HandleFunc("/games", getGamesHandler).Methods("GET")
 	r.HandleFunc("/games/{id}", getGameHandler).Methods("GET")
-	allowedOrigins := handlers.AllowedOrigins([]string{"http://localhost:5173"})
+	allowedOrigins := handlers.AllowedOrigins([]string{"http://localhost:5173", "https://everdell.fun"})
 	allowedMethods := handlers.AllowedMethods([]string{"GET", "POST", "OPTIONS"})
 	allowedHeaders := handlers.AllowedHeaders([]string{"Content-Type"})
 	corsHandler := handlers.CORS(allowedOrigins, allowedMethods, allowedHeaders)(r)
