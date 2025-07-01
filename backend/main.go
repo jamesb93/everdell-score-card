@@ -196,7 +196,7 @@ func main() {
 	allowedMethods := handlers.AllowedMethods([]string{"GET", "POST", "OPTIONS"})
 	allowedHeaders := handlers.AllowedHeaders([]string{"Content-Type"})
 	corsHandler := handlers.CORS(allowedOrigins, allowedMethods, allowedHeaders)(r)
-	port := "8080"
+	port := "8181"
 	log.Printf("Server starting on port %s...", port)
 	if err := http.ListenAndServe(":"+port, corsHandler); err != nil { log.Fatal(err) }
 }
