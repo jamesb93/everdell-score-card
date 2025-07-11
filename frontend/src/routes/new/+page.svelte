@@ -1,5 +1,6 @@
 <script lang="ts">
     import { type GameData, createPlayer, type ScoreForPlayer, deriveTotalScore } from "$lib/scores.svelte"
+    import { API_URL } from "$lib/api";
 
     const createNewGameData = () => {
         return {
@@ -16,7 +17,7 @@
 
     async function handleSubmit() {
         const payload = JSON.stringify(game)
-        const response = await fetch('http://localhost:8080/games', {
+        const response = await fetch(`${API_URL}/games`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
